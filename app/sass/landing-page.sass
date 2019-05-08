@@ -1,0 +1,84 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+/* Header */
+.header_lp
+  height: 700px
+  background: url(../img/stairs.png) no-repeat center
+  .header-text
+    margin-top: 261px
+    &__p
+      font-size: 1.8rem
+      margin-bottom: 32px
+    &__link
+      font-size: 1.2rem
+      text-transform: uppercase
+      color: #fff !important
+
+/* Section basic info */
+.section-basic-info_lp
+  .buttons
+    margin: 66px 0 121px 0
+    .buttons__devenir-membre
+      margin-right: 15px
+    .buttons__association
+      margin-left: 15px
+
+.section-history-lp
+  padding: 101px 0 105px 0
+  font-family: $additional-font
+  height: 492px
+  background: url(../img/shelves.png) no-repeat right
+  background-size: contain
+  &__text
+    margin: 30px 0 57px 0
+    font-size: 1.6rem
+    line-height: 1.5
+  .button-with-arrow
+    margin-right: 45px
+
+.section-our-news-lp
+  padding: 150px 0 133px 0
+  background-color: $background-color
+  &__caption
+    margin-bottom: 103px
+  .common-button_border
+    border-color: $highlight-color
+    color: $highlight-color
+
+/* Section form */
+.section-form
+  height: 869px
+  background-color: $background-color
+  .image-wrapper
+    height: 519px
+    background-color: #fff
+  &__image
+    height: 370px
+    width: 100%
+    object-fit: cover
+  .form-wrapper
+    width: 80%
+    padding-top: 80px
+    position: relative
+    bottom: 210px
+    margin: 0 auto
+    background-color: #fff
+  .form-address,
+  .form-contact
+    margin-bottom: 30px
+    &__caption
+      font-size: 1.6rem
+      margin-bottom: 15px
+    &__text
+      font-size: 1.4rem
+    .link
+      font-size: 1.4rem
+      color: $highlight-color
+
+
+
++media-breakpoint-down(sm)
+  .section-form
+    height: 1000px

@@ -1,0 +1,208 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+@import "landing-page"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 10px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active
+	color: #fff
+	text-decoration: none
+
+html
+	font-size: 10px
+
+/* Buttons */
+.common-button
+  font-size: 1rem
+  text-transform: uppercase
+  padding: 9px 12px
+  border: 1px solid transparent
+  border-radius: 2px
+
+.common-button_border
+  border-color: #fff
+
+.common-button_background
+  background-color: $highlight-color
+
+.button-with-arrow
+  display: inline-block
+  height: 30px
+  line-height: 30px
+  font-size: 1.2rem
+  color: $text !important
+  text-transform: uppercase
+  padding-left: 7px
+  border-left: 1px solid $highlight-color
+  &:after
+    content: ''
+    position: relative
+    left: 12px
+    border: 5px solid transparent
+    border-left: 8px solid #d62040
+    display: inline-block
+    width: 0
+    height: 0
+
+
+/* Header */
+.header
+	position: relative
+	padding: 35px 29px
+	background-size: cover
+	color: #fff
+	.top-bar-content
+		display: flex
+		align-items: center
+		.header-logo-wrapper
+			display: inline-block
+			width: 118px
+			height: 20px
+		.header-menu
+			display: flex
+			justify-content: space-around
+			width: 70%
+			font-size: 1.4rem
+			text-transform: uppercase
+			&__item
+				display: inline-block
+		.header-buttons
+			width: 25%
+			&__select
+				display: inline-block
+	.header-text
+		&__caption
+			font-family: $additional-font
+			font-size: 3rem
+			text-transform: uppercase
+			span
+				color: $highlight-color
+
+/* Section basic info */
+.section-basic-info
+	padding-top: 108px
+	background-color: $background-color
+	&__caption
+		margin-bottom: 73px
+	.item
+		&__caption
+			font-size: 1.8rem
+			text-transform: uppercase
+			color: #d21134
+			margin-bottom: 15px
+		&__text
+			font-size: 1.6rem
+			line-height: 1.5
+
+
+/* Common card */
+
+.common-card
+	height: 373px
+	background-color: #fff
+	margin-bottom: 30px
+	box-shadow: 0 0 10px rgba(0,0,0,0.3)
+	&__image
+		height: 150px
+		width: 100%
+		object-fit: cover
+	&__text
+		padding: 25px 20px
+  &__caption
+    font-size: 2rem
+	&__date
+		font-size: 1.2rem
+		span
+			display: inline-block
+			width: 50px
+			height: 17px
+			margin-right: 18px
+			line-height: 20px
+			border-radius: 2px
+			color: #fff
+			font-size: 0.8rem
+			text-transform: uppercase
+			text-align: center
+			background-color: $highlight-color
+
+
+.caption-with-red-text
+  font-size: 2.4rem
+  span
+    display: block
+    font-size: 1.2rem
+    text-transform: uppercase
+    color: $highlight-color
+
+/* Footer */
+.footer
+  padding-top: 55px
+  background-color: $background-color
+  .menu,
+  .menu-second
+    font-size: 1.4rem
+    font-weight: bold
+    list-style: none
+    padding: 0
+    &__item
+      text-transform: uppercase
+      margin-bottom: 8px
+  .menu-second
+    font-size: 1.3rem
+    &__item
+      text-transform: initial
+  .address
+    font-size: 1.4rem
+    margin-bottom: 15px
+    &__caption
+      margin-bottom: 0
+  .contact
+    font-size: 1.2rem
+  .last-line
+    margin-top: 56px
+    padding: 25px 0
+    border-top: 1px solid #e5ded9
+
+
+@import "media" // Always at the end
