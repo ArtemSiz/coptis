@@ -87,29 +87,45 @@ html
     height: 0
 
 
+/* Superfish styles */
+.header-menu
+  &__link
+    border: none !important
+
+.header-menu
+	&__item
+		background-color: transparent !important
+		color: $text
+
+.submenu
+  &__item
+    background: #fff !important
+  &__link
+    color: $text !important
+    &:hover
+      background: rgba($highlight-color, .1)
+      border-right: 3px solid $highlight-color
+
 /* Header */
 .header
 	position: relative
 	padding: 35px 29px
 	background-size: cover
 	color: #fff
-	.top-bar-content
-		display: flex
-		flex-wrap: wrap
-		align-items: center
-		.header-logo-wrapper
+	&-logo-wrapper
+		display: inline-block
+		width: 118px
+		height: 20px
+	&-menu
+		font-size: 1.4rem
+		text-transform: uppercase
+		&__item
 			display: inline-block
-			width: 118px
-			height: 20px
-		.header-menu
-			display: flex
-			justify-content: space-around
-			width: 70%
-			font-size: 1.4rem
-			text-transform: uppercase
-			&__item
-				display: inline-block
-	.header-text
+	&-buttons
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&-text
 		&__caption
 			font-family: $additional-font
 			font-size: 3rem
