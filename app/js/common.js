@@ -16,8 +16,11 @@ $(function() {
     $('.js-search-input').toggle('fast');
   });
 
-  $('.mobile-menu-links__item').on('click', function (e) {
-    e.preventDefault();
-    $('.mobile-menu-submenu').toggleClass('open-submenu');
+  $('.mobile-menu-links li').on('click', function(e) {
+    $(this).children('ul').toggle();
+    $(this).find('.submenu-arrow').first().toggleClass('arrow-up');
+    $(this).find('.mobile-menu-links__item').first().toggleClass('item-active');
+    $(this).siblings('li').find('ul').hide();
+    e.stopPropagation();
   });
 });
